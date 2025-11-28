@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graphic Assistant Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-primary: #E0B0FF;
+        --color-primary-dark: #B57EDC;
+        --color-text-main: #36454F;
+        --color-text-light: #6B7280;
+        --color-bg-light: #F9FAFB;
+        --color-border-light: #E5E7EB;
+        --color-bg-base: #F9FAFB;
+        --color-surface: #FFFFFF;
+      }
+      html.dark {
+        --color-primary: #D896FF;
+        --color-primary-dark: #E0B0FF;
+        --color-text-main: #F3F4F6;
+        --color-text-light: #9CA3AF;
+        --color-bg-light: #111827;
+        --color-border-light: #374151;
+        --color-bg-base: #030712;
+        --color-surface: #1F2937;
+      }
+      body {
+        background-color: var(--color-bg-base);
+        color: var(--color-text-main);
+        transition: background-color 0.3s, color 0.3s;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: 'var(--color-primary)',
+              primaryDark: 'var(--color-primary-dark)',
+              textMain: 'var(--color-text-main)',
+              textLight: 'var(--color-text-light)',
+              bgLight: 'var(--color-bg-light)',
+              borderLight: 'var(--color-border-light)',
+              surface: 'var(--color-surface)',
+              bgBase: 'var(--color-bg-base)',
+            },
+            fontFamily: {
+              sans: ['Vazirmatn', 'Roboto', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
